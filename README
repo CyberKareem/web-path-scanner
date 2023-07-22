@@ -1,0 +1,36 @@
+Description of the Enhanced Web Path Discovery Scanner Script:
+
+The Enhanced Web Path Discovery Scanner is a Python script designed to perform path discovery on web applications. This tool allows security researchers, penetration testers, and developers to identify hidden or sensitive directories and files on a target website, helping to uncover potential security vulnerabilities and misconfigurations.
+
+Key Features:
+
+Command-Line Interface (CLI):
+The script provides a user-friendly command-line interface (CLI) using the argparse library. Users can specify the target URL to scan and optionally provide a custom wordlist, HTTP method, and proxy server.
+
+Asynchronous Request Handling:
+The scanner uses the aiohttp library to handle asynchronous HTTP requests. This enables faster scanning by sending multiple requests concurrently, improving the overall performance of the tool.
+
+Custom Wordlist Support:
+Users can specify their custom wordlist for path discovery. The script reads the wordlist file and performs path discovery on each entry, allowing users to tailor the scanning process to their specific needs.
+
+HTTP Method Selection:
+The tool supports different HTTP methods, such as GET, POST, PUT, and DELETE. Users can choose the desired HTTP method to use during the scanning process, allowing for a more comprehensive assessment of the target application.
+
+Proxy Server Integration:
+For added anonymity and to avoid IP blocking, the scanner can be configured to use a proxy server. Users can provide the proxy details via the CLI to route requests through the specified proxy.
+
+Usage:
+
+The script is executed from the command line using Python 3.7 or higher. Users can provide the target URL to scan and optional arguments, such as a custom wordlist, HTTP method, and proxy server.
+
+Example Usage:
+
+python enhanced_web_scanner.py https://example.com -w custom_wordlist.txt -m GET --proxy http://proxy-server:8080
+
+Ethical Considerations:
+
+Users should exercise caution and responsibility when using this tool. Scanning or testing web applications without proper authorization is illegal and unethical. Before running the scanner, ensure you have explicit permission from the website owner or administrator to perform any security testing on their site.
+
+Disclaimer:
+
+The Enhanced Web Path Discovery Scanner is provided under the terms of the GNU General Public License. The author and distributor of this script assume no responsibility for any misuse or unauthorized use of the tool. Users are solely responsible for ensuring their actions comply with relevant laws, regulations, and ethical guidelines.
